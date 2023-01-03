@@ -1,0 +1,25 @@
+--Creat clothing store database
+
+CREATE TABLE clothing (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, size TEXT, color TEXT, aisle INTEGER,price INTEGER);
+
+INSERT INTO clothing VALUES (1,"Jeans",5,"large","blue",4, 12.99);
+INSERT INTO clothing VALUES (2,"Shirts",7,"small","pink",9, 5.99);
+INSERT INTO clothing VALUES (3,"Skirts",10,"medium","yellow",4, 10.99);
+INSERT INTO clothing VALUES (4,"Dress",15, "medium","red",4, 14.99);
+INSERT INTO clothing VALUES (5,"Jacket",7,"large","brown",3, 20.99);
+INSERT INTO clothing VALUES (6,"Coat",9,"large","black",3, 49.99);
+INSERT INTO clothing VALUES (7,"Sweater",20,"xlarge","purple",9, 13.99);
+INSERT INTO clothing VALUES (8,"Dress_pants",12,"xsmall","black",4, 22.99);
+INSERT INTO clothing VALUES (9,"Underwear",10,"medium","white",8, 2.99);
+INSERT INTO clothing VALUES (10,"Onsies",5,"0-3","white",1, 4.99);
+INSERT INTO clothing VALUES (11,"Pajamas",8,"xxlarge","blue",8, 8.99);
+INSERT INTO clothing VALUES (12,"Socks",15,"OneSize","green",8, 1.99);
+INSERT INTO clothing VALUES (13,"Boots",10,"small","black",10, 15.99);
+INSERT INTO clothing VALUES (14,"Slides",6,"large","blue",10, 12.99);
+INSERT INTO clothing VALUES (15,"Tennis_shoes",3,"xlarge","white",10, 18.99);
+
+--database ordered by price
+SELECT * FROM clothing ORDER BY price asc;
+
+--seclecting highest priced item from clothing database
+SELECT MAX(price) FROM clothing
